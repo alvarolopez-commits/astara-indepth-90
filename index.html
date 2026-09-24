@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>US Automotive Market Update 2026 — Astara Intelligence In Depth #90</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --bg:#221e41;--bg-dark:#1a1636;--bg-card:#2d2a55;--bg-mid:#261f49;
+  --border:rgba(139,205,255,0.18);--accent:#8bcdff;--accent2:#86bfc6;
+  --txt:#f0f4f8;--txt-sec:#cfe0f0;--txt-muted:#7a9ab8;
+  --col-new:#8bcdff;--col-used:#86bfc6;--col-ref:#4a5a7a;--col-alt:#3ec6c6;--col-days:#ffb935;
+  --font-d:"Orbitron",sans-serif;--font-kpi:"Orbitron",sans-serif;
+  --font-b:"Montserrat",system-ui,sans-serif;--font-e:"Montserrat",system-ui,sans-serif;
+  --g:16px;--ease:cubic-bezier(0.16,1,0.3,1);
+}
+@media(min-width:480px){:root{--g:24px;}}
+@media(min-width:768px){:root{--g:40px;}}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;overflow-x:hidden;}
+body{background:var(--bg);color:var(--txt-sec);font-family:var(--font-b);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+a{color:var(--accent);}
+a:hover{color:#b3ddff;}
+img{max-width:100%;height:auto;display:block;}
+
+.cover{position:relative;min-height:56vh;padding:0;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:var(--bg);}
+.cover__bg{position:absolute;inset:0;z-index:0;}
+.cover__bg img{width:100%;height:100%;object-fit:cover;object-position:center center;display:block;}
+.cover__bg-overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(to bottom, rgba(26,22,54,0.55) 0%, rgba(26,22,54,0.75) 55%, var(--bg) 96%);}
+.cover__topbar{position:relative;z-index:2;display:flex;align-items:center;gap:12px;flex-wrap:wrap;row-gap:8px;padding:var(--g) var(--g) 0;}
+.cover__content{position:relative;z-index:2;padding:32px var(--g) 40px;}
+.cover__wordmark{font-family:var(--font-d);font-size:13px;font-weight:700;letter-spacing:2px;color:var(--accent);text-transform:uppercase;}
+.cover__divider{width:1px;height:16px;background:rgba(139,205,255,0.3);flex-shrink:0;}
+.cover__label{font-family:var(--font-d);font-size:9px;font-weight:700;letter-spacing:2px;color:var(--txt-muted);text-transform:uppercase;white-space:nowrap;}
+.cover__pill{display:inline-flex;border:1px solid rgba(139,205,255,0.22);border-radius:20px;padding:5px 13px;margin-bottom:16px;margin-top:20px;}
+.cover__pill span{font-family:var(--font-d);font-size:8px;font-weight:700;letter-spacing:2px;color:var(--txt-muted);text-transform:uppercase;}
+.cover__title{font-family:var(--font-d);font-size:clamp(28px,5vw,54px);font-weight:700;color:var(--txt);line-height:1.1;margin-bottom:16px;text-transform:uppercase;}
+.cover__title span{color:var(--accent);}
+.cover__sub{font-family:var(--font-e);font-size:clamp(14px,1.5vw,17px);font-weight:400;color:var(--txt);max-width:560px;line-height:1.6;}
+.cover__meta{margin-top:26px;display:flex;gap:24px;flex-wrap:wrap;align-items:center;}
+.cover__date{font-family:var(--font-d);font-size:10px;letter-spacing:2px;color:var(--txt-muted);text-transform:uppercase;}
+.cover__tag{font-size:11px;font-weight:600;letter-spacing:1.5px;color:var(--bg-dark);background:var(--accent);padding:4px 10px;border-radius:4px;text-transform:uppercase;}
+
+section{padding:56px var(--g);}
+@media(min-width:768px){section{padding:76px var(--g);}}
+.chapter{max-width:1100px;margin:0 auto;}
+.chapter-label{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.chapter-num{font-family:var(--font-d);font-size:11px;font-weight:700;letter-spacing:2px;color:var(--accent);border:1px solid var(--accent);padding:3px 8px;border-radius:3px;}
+.chapter-label-text{font-family:var(--font-d);font-size:10px;font-weight:700;letter-spacing:3px;color:var(--txt-muted);text-transform:uppercase;}
+.chapter-title{font-family:var(--font-d);font-size:clamp(18px,3vw,34px);font-weight:700;color:var(--txt);line-height:1.2;margin-bottom:12px;letter-spacing:-0.02em;text-transform:uppercase;}
+.chapter-title span{color:var(--accent);}
+.body-lead{font-family:var(--font-e);font-size:clamp(14px,1.6vw,17px);color:var(--txt-sec);line-height:1.7;margin-bottom:24px;max-width:740px;}
+.body-text{font-size:15px;line-height:1.75;color:var(--txt-sec);margin-bottom:18px;max-width:740px;}
+.section-kicker{font-family:var(--font-d);font-size:16px;font-weight:700;color:var(--txt);margin:28px 0 10px;line-height:1.4;}
+.two-col{display:grid;gap:40px;margin-top:36px;}
+@media(min-width:768px){.two-col{grid-template-columns:1fr 1fr;}}
+.two-col--6040{display:grid;gap:40px;margin-top:36px;}
+@media(min-width:768px){.two-col--6040{grid-template-columns:3fr 2fr;}}
+
+.kpi-strip{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:36px;}
+@media(min-width:600px){.kpi-strip{grid-template-columns:repeat(3,1fr);}}
+@media(min-width:960px){.kpi-strip{grid-template-columns:repeat(6,1fr);}}
+.kpi-card{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:24px 16px;text-align:center;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+.kpi-card__val{font-family:var(--font-b);font-size:clamp(20px,3vw,34px);font-weight:700;color:var(--accent);line-height:1;font-variant-numeric:tabular-nums;white-space:nowrap;}
+.kpi-card__label{font-size:11px;font-weight:600;letter-spacing:1px;color:var(--txt-muted);text-transform:uppercase;margin-top:8px;line-height:1.4;}
+
+.pull-quote{border-left:3px solid var(--accent);padding:20px 24px;background:var(--bg-mid);border-radius:0 10px 10px 0;margin:32px 0;}
+.pull-quote p{font-family:var(--font-e);font-size:clamp(15px,2vw,19px);color:var(--txt);line-height:1.6;font-style:italic;}
+
+.signal-stack{display:grid;gap:14px;align-content:start;}
+.signal-card{background:linear-gradient(145deg,rgba(45,42,85,0.9),rgba(38,31,73,0.92));border:1px solid var(--border);border-radius:12px;padding:18px;position:relative;overflow:hidden;}
+.signal-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--signal-color,var(--accent));}
+.signal-card__value{font-family:var(--font-b);font-size:28px;font-weight:700;color:var(--signal-color,var(--accent));line-height:1;}
+.signal-card__label{font-size:12px;font-weight:600;color:var(--txt);margin-top:8px;}
+.signal-card__text{font-size:11px;color:var(--txt-muted);line-height:1.5;margin-top:5px;}
+
+.caption{font-size:11px;color:var(--txt-muted);line-height:1.6;margin-top:12px;}
+
+.example-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:28px;}
+@media(min-width:700px){.example-grid{grid-template-columns:repeat(3,1fr);}}
+.example-card{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:18px 14px;}
+.example-card__country{font-family:var(--font-d);font-size:9px;font-weight:700;letter-spacing:1.5px;color:var(--txt-muted);text-transform:uppercase;margin-bottom:8px;}
+.example-card__val{font-family:var(--font-b);font-size:20px;font-weight:700;color:var(--accent);line-height:1.25;}
+.example-card__note{font-size:11px;color:var(--txt-muted);margin-top:6px;line-height:1.5;}
+
+.bar-row{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--border);}
+.bar-row:first-child{padding-top:0;}
+.bar-num{font-family:var(--font-b);font-weight:700;font-size:11px;color:var(--txt-muted);width:20px;flex:none;}
+.bar-main{flex:1;min-width:0;}
+.bar-label{font-size:13px;font-weight:600;color:var(--txt);margin-bottom:6px;display:flex;justify-content:space-between;gap:8px;}
+.bar-label b{color:var(--accent);font-family:var(--font-b);}
+.bar-track{height:8px;background:var(--bg-dark);border-radius:4px;overflow:hidden;}
+.bar-fill{height:100%;border-radius:4px;background:var(--accent);}
+.bar-fill--ref{background:repeating-linear-gradient(135deg,var(--col-alt),var(--col-alt) 4px,transparent 4px,transparent 8px);}
+.bar-note{font-size:10px;color:var(--txt-muted);margin-top:4px;}
+
+.table-wrap{margin-top:24px;}
+.density-table{width:100%;border-collapse:collapse;font-size:13px;}
+.density-table thead{display:none;}
+.density-table tbody tr{display:block;background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:14px 16px;margin-bottom:12px;}
+.density-table td{display:block;padding:4px 0;border:none;color:var(--txt-sec);vertical-align:top;line-height:1.5;}
+.density-table td::before{content:attr(data-label);display:block;font-family:var(--font-d);font-size:9px;font-weight:700;letter-spacing:1.5px;color:var(--txt-muted);text-transform:uppercase;margin-bottom:2px;}
+.density-table td:first-child::before{display:none;}
+.density-table td:first-child{font-size:15px;font-weight:700;color:var(--txt);padding-bottom:8px;}
+@media(min-width:700px){
+  .table-wrap{overflow-x:auto;border-radius:10px;border:1px solid var(--border);}
+  .density-table thead{display:table-header-group;}
+  .density-table thead tr{background:var(--bg-dark);}
+  .density-table th{padding:12px 14px;text-align:left;font-family:var(--font-d);font-size:9px;font-weight:700;letter-spacing:2px;color:var(--txt-muted);text-transform:uppercase;border-bottom:1px solid var(--border);white-space:nowrap;}
+  .density-table tbody tr{display:table-row;background:none;border:none;border-radius:0;padding:0;margin-bottom:0;}
+  .density-table td{display:table-cell;padding:11px 14px;border-bottom:1px solid rgba(46,80,114,0.4);}
+  .density-table td::before{display:none;}
+  .density-table td:first-child{font-size:13px;padding-bottom:11px;}
+  .density-table tbody tr:last-child td{border-bottom:none;}
+  .density-table tbody tr:hover td{background:rgba(30,52,82,0.4);}
+}
+.sp{display:inline-block;font-size:10px;font-weight:600;padding:2px 8px;border-radius:10px;white-space:nowrap;}
+
+.chart-wrap{margin-top:28px;background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:20px 14px 16px;}
+.chart-wrap__title{font-family:var(--font-d);font-size:10px;font-weight:700;letter-spacing:1.5px;color:var(--txt-muted);text-transform:uppercase;margin-bottom:6px;}
+.chart-legend{display:flex;flex-wrap:wrap;gap:16px;margin-bottom:14px;}
+.chart-legend__item{display:flex;align-items:center;gap:7px;font-size:11px;font-weight:600;color:var(--txt-sec);}
+.chart-legend__swatch{width:14px;height:8px;border-radius:2px;flex:none;}
+.chart-legend__swatch--line{width:14px;height:2px;border-radius:2px;position:relative;}
+.chart-legend__swatch--line::before{content:"";position:absolute;left:5px;top:-2px;width:4px;height:4px;border-radius:50%;background:inherit;}
+.chart-svg{width:100%;height:auto;display:block;}
+.chart-svg text{font-family:var(--font-b);}
+.chart-x-label{font-size:9px;fill:var(--txt-muted);}
+.chart-bar-value{font-size:11.5px;fill:var(--txt);font-weight:700;}
+.chart-axis-label{font-size:9px;fill:var(--txt-muted);}
+.chart-value-label{font-size:13px;fill:var(--txt);font-weight:700;}
+.chart-note{font-size:9.5px;fill:var(--accent);font-weight:600;}
+.chart-note-alt{font-size:9.5px;fill:var(--accent2);font-weight:600;}
+
+.callout-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px;}
+.callout-card{background:var(--bg-mid);border:1px solid var(--border);border-radius:12px;padding:16px;text-align:center;}
+.callout-card__val{font-family:var(--font-b);font-weight:700;font-size:19px;color:var(--txt);}
+.callout-card__label{font-size:10.5px;color:var(--txt-muted);margin-top:5px;line-height:1.4;}
+
+.stat-hero{display:grid;grid-template-columns:1fr;gap:14px;margin-top:8px;}
+@media(min-width:700px){.stat-hero{grid-template-columns:repeat(3,1fr);}}
+.stat-hero__panel{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:26px 18px;text-align:center;}
+.stat-hero__panel--lead{border-color:var(--accent);background:linear-gradient(145deg,rgba(45,42,85,0.95),rgba(38,31,73,0.95));}
+.stat-hero__val{font-family:var(--font-b);font-weight:700;font-size:clamp(26px,6vw,42px);color:var(--txt);line-height:1;font-variant-numeric:tabular-nums;}
+.stat-hero__panel--lead .stat-hero__val{color:var(--accent);}
+.stat-hero__label{font-size:11.5px;color:var(--txt-muted);text-transform:uppercase;letter-spacing:1px;margin-top:10px;font-weight:600;line-height:1.4;}
+.stat-hero__foot{margin-top:18px;font-size:12.5px;color:var(--txt-sec);line-height:1.65;padding-top:16px;border-top:1px solid var(--border);}
+
+.indicator-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:8px;}
+@media(min-width:640px){.indicator-grid{grid-template-columns:repeat(4,1fr);}}
+.indicator-card{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:22px 12px;text-align:center;}
+.indicator-card--grouped{background:var(--bg-mid);border:1px solid var(--accent2);}
+.indicator-card__val{font-family:var(--font-b);font-weight:700;font-size:clamp(20px,3.4vw,28px);color:var(--txt);}
+.indicator-card__label{font-size:10.5px;color:var(--txt-muted);margin-top:7px;line-height:1.4;}
+.indicator-group-label{grid-column:1/-1;font-family:var(--font-d);font-size:9px;letter-spacing:2px;color:var(--accent2);text-transform:uppercase;text-align:center;margin:8px 0 -2px;}
+.indicator-foot{margin-top:18px;font-size:12.5px;color:var(--txt-sec);line-height:1.65;padding-top:16px;border-top:1px solid var(--border);}
+
+.hero-compare{display:grid;grid-template-columns:1fr;gap:12px;margin-top:28px;}
+@media(min-width:700px){.hero-compare{grid-template-columns:1fr auto 1fr;align-items:center;gap:10px;}}
+.hero-compare__card{background:var(--bg-card);border:1px solid var(--border);border-radius:16px;padding:30px 22px;text-align:center;}
+.hero-compare__card--now{border-color:var(--accent);}
+.hero-compare__year{font-family:var(--font-d);font-size:11px;letter-spacing:2px;color:var(--txt-muted);text-transform:uppercase;}
+.hero-compare__budget{font-family:var(--font-b);font-weight:700;font-size:16px;color:var(--accent);margin-top:8px;}
+.hero-compare__stat{margin-top:20px;}
+.hero-compare__stat-val{font-family:var(--font-b);font-weight:700;font-size:clamp(24px,5vw,34px);color:var(--txt);line-height:1.15;}
+.hero-compare__stat-label{font-size:11px;color:var(--txt-muted);margin-top:2px;text-transform:uppercase;letter-spacing:0.5px;}
+.hero-compare__arrow{display:flex;flex-direction:row;align-items:center;justify-content:center;gap:10px;padding:6px 0;}
+@media(min-width:700px){.hero-compare__arrow{flex-direction:column;}}
+.hero-compare__delta{font-family:var(--font-b);font-weight:700;color:var(--accent);font-size:14px;text-align:center;line-height:1.5;white-space:nowrap;}
+.hero-compare__arrow-glyph{font-size:20px;color:var(--txt-muted);}
+
+.conclusion-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:28px;}
+@media(min-width:700px){.conclusion-grid{grid-template-columns:1fr 1fr;}}
+.conclusion-card{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:22px;}
+.conclusion-card__num{font-family:var(--font-d);font-size:11px;font-weight:700;color:var(--accent);border:1px solid var(--accent);border-radius:3px;padding:2px 7px;display:inline-block;margin-bottom:12px;}
+.conclusion-card__title{font-family:var(--font-b);font-weight:700;font-size:15px;color:var(--txt);margin-bottom:9px;line-height:1.4;}
+.conclusion-card__text{font-size:12.5px;color:var(--txt-sec);line-height:1.7;}
+.conclusion-card__text + .conclusion-card__text{margin-top:8px;}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s var(--ease),transform 0.7s var(--ease);}
+.reveal.visible{opacity:1;transform:none;}
+.reveal-d1{transition-delay:0.1s;}
+.reveal-d2{transition-delay:0.2s;}
+.section-divider{height:1px;background:var(--border);max-width:1100px;margin:0 auto;}
+
+.footer{background:var(--bg-dark);padding:48px var(--g);text-align:center;border-top:1px solid var(--border);}
+.footer__divider{width:40px;height:1px;background:var(--border);margin:20px auto;}
+.footer__wordmark{font-family:var(--font-d);font-size:13px;font-weight:700;letter-spacing:2px;color:var(--accent);text-transform:uppercase;}
+.footer__text{font-size:13px;color:var(--txt-muted);line-height:1.7;max-width:520px;margin:12px auto 0;}
+.footer__disclaimer{font-size:11px;color:rgba(122,154,184,0.55);margin-top:16px;max-width:600px;margin-left:auto;margin-right:auto;}
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="cover__bg"><img src="deploy/cover-88.jpg" alt="US automotive market"></div>
+  <div class="cover__bg-overlay"></div>
+  <div class="cover__topbar">
+    <img src="deploy/logo clear.svg" alt="Astara Intelligence" style="height:16px;width:auto;">
+    <div class="cover__divider"></div>
+    <div class="cover__label">In Depth #90</div>
+  </div>
+  <div class="cover__content">
+    <div class="cover__pill"><span>Market Data · Affordability · Credit</span></div>
+    <h1 class="cover__title">US Automotive Market<br>Update <span>2026</span></h1>
+    <p class="cover__sub">The U.S. automotive market is resilient on volume, but affordability remains the central pressure point.</p>
+    <div class="cover__meta">
+      <span class="cover__date">Data cut-off: 22 September 2026</span>
+      <span class="cover__tag">Jan–Aug 2026 + Mid-Sept signals</span>
+    </div>
+  </div>
+</div>
+
+<!-- 01 THESIS -->
+<section>
+<div class="chapter reveal">
+  <div class="chapter-label"><span class="chapter-num">01</span><span class="chapter-label-text">The Thesis</span></div>
+  <h2 class="chapter-title">A resilient market that is becoming <span>increasingly selective</span></h2>
+  <div class="two-col--6040">
+    <div>
+      <p class="body-text">The new-vehicle market recovered from a weak start to 2026 and established a relatively stable high-16-million sales pace through most of the spring and summer. The seasonally adjusted annual rate moved from 14.8 million in January to 16.8 million in August, with six consecutive months above 16 million. August was the strongest monthly pace of the year.</p>
+      <p class="body-text">At the same time, the market is not becoming materially cheaper. The average new-vehicle transaction price reached $50,089 in August, the first month of 2026 above $50,000. Incentive spending fell to 6.5% of ATP, versus 7.2% a year earlier. This means the market is maintaining volume without relying on a broad return to aggressive discounting.</p>
+      <div class="pull-quote">
+        <p>The most important affordability signal is therefore not headline sales, but the structure needed to sustain them.</p>
+      </div>
+      <p class="body-text">The typical monthly payment reached $770, while 31.3% of auto loans exceeded 72 months and 57.4% involved negative equity. Negative equity means that the outstanding balance on a vehicle loan is greater than the vehicle's current market value. In practice, this can make the next vehicle purchase harder to finance because part of the old debt has to be carried into the new transaction.</p>
+      <p class="body-text">Retail used-vehicle sales increased 3.9% month over month in August, while dealer inventory fell 1.1%. Days' supply tightened from 46 to 44 days. Yet the average used listing price climbed to $27,239, 7% above a year earlier and the highest monthly level since December 2022.</p>
+      <p class="body-text">At wholesale level, the direction is now different. The Manheim Used Vehicle Value Index fell from 215.3 in March to 208.2 in August and 206.2 by mid-September. September wholesale values were 0.4% below a year earlier, marking the first negative year-over-year reading of 2026. The used market is therefore showing an increasingly important split between cooling wholesale values and still-elevated retail prices.</p>
+      <p class="body-text">Electric vehicles tell a similarly mixed story. New EV sales reached 78,895 units in August, up 2.5% from July but down 46.9% year over year against an exceptionally strong August 2025 comparison. Meanwhile, used EV sales increased 14.7% year over year, and EV inventory moved much closer to the broader internal-combustion market.</p>
+      <p class="body-text">The market is therefore not moving in one direction. It is better described as a resilient but increasingly selective market, where volume is being maintained while affordability pressure is moving deeper into financing, vehicle age, inventory composition and consumer choice.</p>
+    </div>
+    <div class="signal-stack reveal reveal-d1">
+      <div class="signal-card" style="--signal-color:var(--col-new)">
+        <div class="signal-card__value">16.8M</div>
+        <div class="signal-card__label">August SAAR</div>
+        <div class="signal-card__text">Strongest monthly sales pace of the year; six straight months above 16 million.</div>
+      </div>
+      <div class="signal-card" style="--signal-color:var(--col-new)">
+        <div class="signal-card__value">$50,089</div>
+        <div class="signal-card__label">Average transaction price</div>
+        <div class="signal-card__text">First month of 2026 above $50,000; incentives fell to 6.5% of ATP.</div>
+      </div>
+      <div class="signal-card" style="--signal-color:var(--col-used)">
+        <div class="signal-card__value">57.4%</div>
+        <div class="signal-card__label">Loans with negative equity</div>
+        <div class="signal-card__text">31.3% of loans now exceed 72 months, both record levels.</div>
+      </div>
+      <div class="signal-card" style="--signal-color:var(--col-used)">
+        <div class="signal-card__value">206.2</div>
+        <div class="signal-card__label">Manheim index, mid-Sept</div>
+        <div class="signal-card__text">Down from 215.3 in March — first negative YoY reading of 2026.</div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- 02 THE NUMBERS -->
+<section style="background:var(--bg-dark);">
+<div class="chapter reveal">
+  <div class="chapter-label"><span class="chapter-num">02</span><span class="chapter-label-text">The Numbers</span></div>
+  <h2 class="chapter-title">Six conclusions <span>from the August data</span></h2>
+  <div class="kpi-strip reveal reveal-d1">
+    <div class="kpi-card"><div class="kpi-card__val">73</div><div class="kpi-card__label">Days' supply, lowest since Apr 2025</div></div>
+    <div class="kpi-card"><div class="kpi-card__val">35.5</div><div class="kpi-card__label">Weeks of median income needed</div></div>
+    <div class="kpi-card"><div class="kpi-card__val">105.3</div><div class="kpi-card__label">Credit Availability Index</div></div>
+    <div class="kpi-card"><div class="kpi-card__val">$27,239</div><div class="kpi-card__label">Avg used listing price, +7% YoY</div></div>
+    <div class="kpi-card"><div class="kpi-card__val">31.8%</div><div class="kpi-card__label">Used sales under $20K, Q2 2026</div></div>
+    <div class="kpi-card"><div class="kpi-card__val">-46.9%</div><div class="kpi-card__label">New EV sales, YoY</div></div>
+  </div>
+  <div class="conclusion-grid reveal reveal-d2">
+    <div class="conclusion-card">
+      <div class="conclusion-card__num">01</div>
+      <div class="conclusion-card__title">Sales are accelerating while inventory is shrinking</div>
+      <p class="conclusion-card__text">August is the clearest expression of this tension. The new-vehicle sales pace increased 3.3% from July, while available inventory fell from 2.73 million to 2.68 million units. Days' supply dropped from 77 to 73 days, its lowest level since April 2025.</p>
+      <p class="conclusion-card__text">This is not a classic oversupply market. At the industry level, supply remains adequate, but the shortage is increasingly concentrated in affordable vehicles. Cars priced at $30,000 or less had only 54 days of supply, compared with more than 90 days for vehicles priced above $60,000.</p>
+    </div>
+    <div class="conclusion-card">
+      <div class="conclusion-card__num">02</div>
+      <div class="conclusion-card__title">Affordability is improving statistically, but worsening structurally</div>
+      <p class="conclusion-card__text">Cox's Vehicle Affordability Index shows that the number of weeks of median income required to purchase the average new vehicle fell from 35.9 weeks in August 2025 to 35.5 weeks in August 2026. Average Income has therefore grown faster than vehicle prices, which do not mean that median or middle-class income has growth.</p>
+      <p class="conclusion-card__text">But the absolute burden remains high. The average transaction price is now above $50,000, the average monthly payment is $770, and incentives have declined. The market is therefore technically more affordable year over year while still being structurally difficult for many households to access.</p>
+    </div>
+    <div class="conclusion-card">
+      <div class="conclusion-card__num">03</div>
+      <div class="conclusion-card__title">Credit access is improving, but partly because deal structures are becoming more aggressive</div>
+      <p class="conclusion-card__text">Credit availability reached 105.3 in August, the highest level since November 2015. Approval rates also improved for a fifth consecutive month. But the improvement did not primarily come from cheaper money.</p>
+      <p class="conclusion-card__text">The average contract rate rose to 10.99%. The share of loans longer than 72 months reached a record 31.3%, while 57.4% of loans involved negative equity. Down payments remained at just 13%. These structures reduce the immediate monthly burden or facilitate the transaction, but they can increase total borrowing costs and extend the period during which the borrower owes more than the vehicle is worth.</p>
+    </div>
+    <div class="conclusion-card">
+      <div class="conclusion-card__num">04</div>
+      <div class="conclusion-card__title">Wholesale used-car prices are falling while retail used-car prices are still rising</div>
+      <p class="conclusion-card__text">The Manheim index reached 215.3 in March, then declined to 208.2 in August and 206.2 by mid-September. At the same time, the average retail used-vehicle listing price reached $27,239 in August, up 7% year over year.</p>
+      <p class="conclusion-card__text">This does not necessarily indicate a contradiction in the data. Wholesale and retail markets operate at different points in the value chain, and retail pricing generally adjusts more slowly.</p>
+    </div>
+    <div class="conclusion-card">
+      <div class="conclusion-card__num">05</div>
+      <div class="conclusion-card__title">The affordable used-car market is shrinking even as used cars remain the main alternative to new</div>
+      <p class="conclusion-card__text">Edmunds estimates that vehicles below $20,000 represented 55.2% of used sales in Q2 2019, but only 31.8% in Q2 2026. Vehicles priced above $30,000 increased from 16.8% to 35.8%.</p>
+      <p class="conclusion-card__text">The shift is even clearer at the entry level. In Q2 2019, a $10,000-$15,000 budget bought a vehicle averaging 4.7 years old and 58,250 miles. By Q2 2026, the same budget bought a vehicle averaging 8.7 years old and 98,222 miles.</p>
+    </div>
+    <div class="conclusion-card">
+      <div class="conclusion-card__num">06</div>
+      <div class="conclusion-card__title">EVs are weak in new-car volume but stronger in used-car momentum</div>
+      <p class="conclusion-card__text">August new EV sales fell 46.9% year over year, but used EV sales increased 14.7%. Used EV inventory is benefiting from growing off-lease returns, while new EV inventory is now only two days above the broader ICE+ market.</p>
+      <p class="conclusion-card__text">At the same time, new EV prices have moved closer to the broader market. The average new EV ATP was $54,813 in August, with an EV premium of 9.4%, versus more than 16% a year earlier.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- 03 NEW-VEHICLE MARKET -->
+<section>
+<div class="chapter reveal">
+  <div class="chapter-label"><span class="chapter-num">03</span><span class="chapter-label-text">The New-Vehicle Market</span></div>
+  <h2 class="chapter-title">Sales are accelerating <span>as inventory tightens</span></h2>
+
+  <p class="section-kicker">From a weak start to a sustained high-16M sales pace</p>
+  <p class="body-text">The year started weakly. January's SAAR fell to 14.8 million, affected by severe winter weather. February recovered to 15.8 million, March reached 16.3 million, and the market then remained broadly in the high-15 to low-17 million range.</p>
+  <p class="body-text">June was subsequently revised upward to approximately 17.0 million, before July moderated to 16.3 million. August then reached 16.8 million, the strongest pace of the year.</p>
+
+  <div class="chart-wrap reveal reveal-d1">
+    <div class="chart-wrap__title">U.S. New-Vehicle Sales Pace Stabilizes Above 16M</div>
+    <div id="chart1"></div>
+  </div>
+  <p class="caption">Reading: January was the lowest point. From March onward, the market settled into a substantially more stable range. After a weak start, the market established a sustained high-16M sales pace. Source: Cox Automotive monthly sales updates and Auto Market Weekly Summary.</p>
+
+  <p class="section-kicker">August produced a notable supply-demand tension</p>
+  <p class="body-text">August sales accelerated while inventory declined for the third consecutive month. Available inventory fell from 2.73 million units in July to 2.68 million in August, while days' supply dropped from 77 to 73. Retail demand therefore continued to absorb inventory rather than allowing it to accumulate.</p>
+
+  <div class="chart-wrap reveal reveal-d1">
+    <div class="chart-wrap__title">Sales Are Accelerating as Inventory Tightens</div>
+    <div class="chart-legend">
+      <div class="chart-legend__item"><span class="chart-legend__swatch" style="background:var(--col-new)"></span>Inventory (million units)</div>
+      <div class="chart-legend__item"><span class="chart-legend__swatch chart-legend__swatch--line" style="background:var(--col-days)"></span>Days' supply</div>
+    </div>
+    <div id="chart2"></div>
+  </div>
+  <p class="caption">The issue is no longer simply how much inventory exists, but what kind of inventory exists. Source: Cox Automotive vAuto Live Market View.</p>
+
+  <div class="callout-row reveal reveal-d2">
+    <div class="callout-card"><div class="callout-card__val">54 days</div><div class="callout-card__label">Supply for vehicles priced $30K or less</div></div>
+    <div class="callout-card"><div class="callout-card__val">&gt;90 days</div><div class="callout-card__label">Supply for vehicles priced above $60K</div></div>
+  </div>
+</div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- 04 AFFORDABILITY -->
+<section style="background:var(--bg-dark);">
+<div class="chapter reveal">
+  <div class="chapter-label"><span class="chapter-num">04</span><span class="chapter-label-text">Affordability</span></div>
+  <h2 class="chapter-title">A $50K vehicle still means <span>a $770 monthly commitment</span></h2>
+  <p class="body-lead">Affordability is the market's real pressure point.</p>
+  <p class="body-text">The average new-vehicle transaction price increased to $50,089 in August, up 0.5% from July and 1.9% year over year. The typical monthly payment reached $770, while the median income required to purchase the average new vehicle rose to 35.5 weeks, slightly above July but below 35.9 weeks a year earlier.</p>
+  <p class="body-text">The most interesting feature is the divergence between relative and absolute affordability. Income growth of 3.8% exceeded vehicle price growth of 1.9%, which improved the year-over-year affordability measure. However, the average vehicle still costs more than $50,000 and requires around $770 per month.</p>
+
+  <div class="stat-hero reveal reveal-d1">
+    <div class="stat-hero__panel stat-hero__panel--lead"><div class="stat-hero__val">$50,089</div><div class="stat-hero__label">Average new-vehicle ATP</div></div>
+    <div class="stat-hero__panel"><div class="stat-hero__val">$770/mo</div><div class="stat-hero__label">Typical monthly payment</div></div>
+    <div class="stat-hero__panel"><div class="stat-hero__val">35.5 weeks</div><div class="stat-hero__label">Median income required</div></div>
+  </div>
+  <p class="caption" style="max-width:740px;">Income is growing faster than vehicle prices, but the absolute affordability burden remains high.</p>
+
+  <div class="table-wrap reveal reveal-d2">
+    <table class="density-table">
+      <thead><tr><th>Indicator</th><th>August 2026</th><th>YoY</th></tr></thead>
+      <tbody>
+        <tr><td>Average transaction price</td><td data-label="August 2026">$50,089</td><td data-label="YoY">+1.9%</td></tr>
+        <tr><td>Typical monthly payment</td><td data-label="August 2026">$770</td><td data-label="YoY">+2.6%</td></tr>
+        <tr><td>Weeks of median income</td><td data-label="August 2026">35.5</td><td data-label="YoY">-1.2%</td></tr>
+        <tr><td>Estimated 72-month loan rate</td><td data-label="August 2026">9.49%</td><td data-label="YoY">+1 bp</td></tr>
+        <tr><td>Incentives as % ATP</td><td data-label="August 2026">6.5%</td><td data-label="YoY">down from 7.2%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="caption">Source: Kelley Blue Book / Cox Automotive / Moody's Analytics.</p>
+</div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- 05 CREDIT -->
+<section>
+<div class="chapter reveal">
+  <div class="chapter-label"><span class="chapter-num">05</span><span class="chapter-label-text">Credit & Deal Structure</span></div>
+  <h2 class="chapter-title">Credit is more available, but the structure <span>is getting longer and riskier</span></h2>
+  <p class="section-kicker">Credit access is opening, but through more complex deal structures</p>
+  <p class="body-text">The Dealertrack Credit Availability Index increased for the fourth consecutive month to 105.3, its highest level since November 2015. Overall approval reached 73.9%. But the mechanics matter.</p>
+  <p class="body-text">The average contract rate reached 10.99%. The share of loans longer than 72 months hit a record 31.3%, and the percentage of loans involving negative equity reached 57.4%.</p>
+  <p class="body-text">Negative equity is a particularly important market indicator. It means the outstanding loan balance is higher than the vehicle's current market value. When a customer trades in that vehicle, the difference may have to be financed as part of the next transaction.</p>
+
+  <div class="indicator-grid reveal reveal-d1">
+    <div class="indicator-card"><div class="indicator-card__val">105.3</div><div class="indicator-card__label">Credit Availability Index</div></div>
+    <div class="indicator-card"><div class="indicator-card__val">73.9%</div><div class="indicator-card__label">Approval rate</div></div>
+    <div class="indicator-group-label">Deal structure</div>
+    <div class="indicator-card indicator-card--grouped"><div class="indicator-card__val">31.3%</div><div class="indicator-card__label">Loans longer than 72 months</div></div>
+    <div class="indicator-card indicator-card--grouped"><div class="indicator-card__val">57.4%</div><div class="indicator-card__label">Loans with negative equity</div></div>
+  </div>
+  <p class="indicator-foot reveal reveal-d1">Longer terms and negative equity can lower the immediate payment burden but increase total borrowing costs and reduce flexibility.</p>
+
+  <div class="table-wrap reveal reveal-d2">
+    <table class="density-table">
+      <thead><tr><th>Indicator</th><th>August 2026</th></tr></thead>
+      <tbody>
+        <tr><td>Credit Availability Index</td><td data-label="August 2026">105.3</td></tr>
+        <tr><td>Approval rate</td><td data-label="August 2026">73.9%</td></tr>
+        <tr><td>Average contract rate</td><td data-label="August 2026">10.99%</td></tr>
+        <tr><td>Loans &gt;72 months</td><td data-label="August 2026">31.3%</td></tr>
+        <tr><td>Loans with negative equity</td><td data-label="August 2026">57.4%</td></tr>
+        <tr><td>Down payment share</td><td data-label="August 2026">13.0%</td></tr>
+        <tr><td>Subprime share</td><td data-label="August 2026">16.6%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="caption">Source: Cox Automotive Dealertrack Credit Availability Index.</p>
+</div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- 06 USED-VEHICLE MARKET -->
+<section style="background:var(--bg-dark);">
+<div class="chapter reveal">
+  <div class="chapter-label"><span class="chapter-num">06</span><span class="chapter-label-text">The Used-Vehicle Market</span></div>
+  <h2 class="chapter-title">Retail prices keep climbing <span>while wholesale values turn down</span></h2>
+  <p class="section-kicker">Used vehicles remain relatively attractive, but the market is no longer cheap</p>
+  <p class="body-text">August used retail sales were estimated at 1.50 million units, up 3.9% from July. Inventory fell 1.1% to 2.13 million vehicles, pushing days' supply down from 46 to 44. Yet the average listing price increased to $27,239, 7% above a year earlier and the highest level since December 2022.</p>
+  <p class="body-text">This creates a second affordability tension: used vehicles remain materially cheaper than new vehicles, but the low-price end is becoming increasingly difficult to access. Vehicles below $15,000 represented only 15.1% of used inventory, down from 20.6% a year earlier. Their supply was just 29 days, versus 44 days for the overall used market.</p>
+
+  <div class="table-wrap reveal reveal-d1">
+    <table class="density-table">
+      <thead><tr><th>Indicator</th><th>August 2026</th><th>YoY / MoM</th></tr></thead>
+      <tbody>
+        <tr><td>Used retail sales</td><td data-label="August 2026">1.50M</td><td data-label="YoY / MoM">+3.9% MoM / -3.2% YoY</td></tr>
+        <tr><td>Inventory</td><td data-label="August 2026">2.13M</td><td data-label="YoY / MoM">-1.1% MoM / +1.3% YoY</td></tr>
+        <tr><td>Days' supply</td><td data-label="August 2026">44</td><td data-label="YoY / MoM">-2 MoM / +2 YoY</td></tr>
+        <tr><td>Average listing price</td><td data-label="August 2026">$27,239</td><td data-label="YoY / MoM">+0.9% MoM / +7% YoY</td></tr>
+        <tr><td>&lt;$15K inventory share</td><td data-label="August 2026">15.1%</td><td data-label="YoY / MoM">vs. 20.6% YoY</td></tr>
+        <tr><td>&lt;$15K days' supply</td><td data-label="August 2026">29</td><td data-label="YoY / MoM">15 days below market</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="caption">Source: Cox Automotive vAuto Live Market View.</p>
+
+  <p class="section-kicker">The wholesale market has turned</p>
+  <p class="body-text">The Manheim Used Vehicle Value Index rose strongly during the first quarter, peaking at 215.3 in March. It then moved lower. The March peak was driven by a strong spring bounce and tax-refund demand. By August, depreciation had resumed, and by mid-September the index had moved 0.4% below September 2025, the first negative year-over-year reading of 2026.</p>
+
+  <div class="chart-wrap reveal reveal-d1">
+    <div class="chart-wrap__title">Used Wholesale Values Have Given Back the Spring Bounce</div>
+    <div id="chart5"></div>
+  </div>
+  <p class="caption">Wholesale supply: 27.8 days mid-September. The data show normalization and depreciation, not a disorderly market.</p>
+</div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- 07 AFFORDABLE USED-CAR SQUEEZE -->
+<section>
+<div class="chapter reveal">
+  <div class="chapter-label"><span class="chapter-num">07</span><span class="chapter-label-text">The Affordable Used-Car Squeeze</span></div>
+  <h2 class="chapter-title">The same budget now buys <span>an older, higher-mileage vehicle</span></h2>
+  <p class="section-kicker">The $15,000 consumer has lost substantial purchasing power</p>
+  <p class="body-text">Edmunds provides the clearest long-term illustration. In Q2 2019, vehicles below $20,000 represented 55.2% of used sales. By Q2 2026, that share had fallen to 31.8%. The share above $30,000 increased from 16.8% to 35.8%.</p>
+  <p class="body-text">At the $10,000-$15,000 price point, average vehicle age increased from 4.7 to 8.7 years, while mileage rose from 58,250 to 98,222 miles.</p>
+
+  <div class="hero-compare reveal reveal-d1">
+    <div class="hero-compare__card">
+      <div class="hero-compare__year">Q2 2019</div>
+      <div class="hero-compare__budget">$10,000–$15,000 budget</div>
+      <div class="hero-compare__stat"><div class="hero-compare__stat-val">4.7 years</div><div class="hero-compare__stat-label">Average age</div></div>
+      <div class="hero-compare__stat"><div class="hero-compare__stat-val">58,250 mi</div><div class="hero-compare__stat-label">Average mileage</div></div>
+    </div>
+    <div class="hero-compare__arrow">
+      <span class="hero-compare__arrow-glyph">→</span>
+      <div class="hero-compare__delta">+4.0 years<br>+39,972 miles</div>
+    </div>
+    <div class="hero-compare__card hero-compare__card--now">
+      <div class="hero-compare__year">Q2 2026</div>
+      <div class="hero-compare__budget">$10,000–$15,000 budget</div>
+      <div class="hero-compare__stat"><div class="hero-compare__stat-val">8.7 years</div><div class="hero-compare__stat-label">Average age</div></div>
+      <div class="hero-compare__stat"><div class="hero-compare__stat-val">98,222 mi</div><div class="hero-compare__stat-label">Average mileage</div></div>
+    </div>
+  </div>
+  <p class="caption" style="max-width:740px;margin-top:20px;">Core message: the problem is not only that cars are more expensive — the same budget buys less vehicle.</p>
+
+  <div class="callout-row reveal reveal-d2" style="margin-top:28px;">
+    <div class="callout-card"><div class="callout-card__val">55.2% → 31.8%</div><div class="callout-card__label">Share of used sales under $20K, Q2 2019 vs. Q2 2026</div></div>
+    <div class="callout-card"><div class="callout-card__val">16.8% → 35.8%</div><div class="callout-card__label">Share of used sales above $30K, Q2 2019 vs. Q2 2026</div></div>
+  </div>
+</div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- 08 PRICE STRUCTURE -->
+<section style="background:var(--bg-dark);">
+<div class="chapter reveal">
+  <div class="chapter-label"><span class="chapter-num">08</span><span class="chapter-label-text">New-Vehicle Price Structure</span></div>
+  <h2 class="chapter-title">The U.S. market is still <span>structurally expensive</span></h2>
+  <p class="section-kicker">Prices crossed $50,000 despite consumers moving toward cheaper segments</p>
+  <p class="body-text">New-vehicle ATP increased to $50,089 in August, while MSRP reached $51,852. Incentives represented only 6.5% of ATP, down from 7.2% one year earlier. The market is still dominated by high-value body types, but consumers are increasingly shifting toward lower-priced segments.</p>
+
+  <div class="reveal reveal-d1" style="margin-top:28px;" id="chart7"></div>
+  <p class="caption">~65% of August sales came from the five highest-volume segments. The $50K average is a structural result of the U.S. vehicle mix rather than simply a pricing decision by individual manufacturers. Source: Kelley Blue Book / Cox Automotive.</p>
+</div>
+</section>
+
+<footer class="footer">
+  <img src="deploy/logo clear.svg" alt="Astara Intelligence" style="height:18px;width:auto;margin:0 auto;opacity:0.7;">
+  <div class="footer__divider"></div>
+  <p class="footer__text">Astara Intelligence In Depth is a periodic analysis of the automotive and mobility sector for professionals navigating strategic uncertainty.</p>
+  <p class="footer__disclaimer">Sources: Cox Automotive (monthly sales updates, Auto Market Weekly Summary, vAuto Live Market View, Vehicle Affordability Index, Dealertrack Credit Availability Index), Kelley Blue Book, Moody's Analytics, Manheim Used Vehicle Value Index, Edmunds. Data cut-off: 22 September 2026. Figures reflect published data as of the cut-off date and are subject to revision. This newsletter is produced for informational purposes only and does not constitute investment advice. © 2026 Astara Intelligence.</p>
+</footer>
+
+<script>
+function scaleFn(domain, range){
+  const d0=domain[0], d1=domain[1], r0=range[0], r1=range[1];
+  return function(v){ return r0 + (v-d0)/(d1-d0)*(r1-r0); };
+}
+function svgBadge(cx, cy, text, color, fontSize){
+  fontSize = fontSize || 12;
+  const w = text.length*fontSize*0.58 + 16;
+  const h = fontSize + 12;
+  return `<rect x="${cx-w/2}" y="${cy-h+4}" width="${w}" height="${h}" rx="${h/2}" fill="var(--bg-dark)" stroke="${color}" stroke-width="1.25"/>`+
+    `<text x="${cx}" y="${cy-h/2+fontSize/2+4}" text-anchor="middle" style="font-size:${fontSize}px;font-weight:700;fill:${color};">${text}</text>`;
+}
+
+// CHART 1 — New-vehicle SAAR, smooth-ish line
+const C1 = [
+  {m:'Jan',v:14.8},{m:'Feb',v:15.8},{m:'Mar',v:16.3},{m:'Apr',v:15.9},
+  {m:'May',v:16.1},{m:'Jun',v:17.0,note:'Revised higher'},{m:'Jul',v:16.3},{m:'Aug',v:16.8,end:true}
+];
+function renderChart1(){
+  const w=700,h=260,padL=14,padR=14,plotT=50,plotB=40;
+  const n=C1.length;
+  const bw=(w-padL-padR)/n;
+  const y=scaleFn([13.8,17.6],[h-plotB,plotT]);
+  const base=y(13.8);
+  const y16=y(16);
+  const shadeEnd=padL+bw*2;
+  let s=`<svg viewBox="0 0 ${w} ${h}" class="chart-svg" role="img" aria-label="New-vehicle SAAR by month, January to August 2026">`;
+  s+=`<rect x="${padL-4}" y="${plotT}" width="${shadeEnd-(padL-4)}" height="${h-plotB-plotT}" fill="var(--col-new)" opacity="0.08"/>`;
+  s+=`<text x="${padL}" y="${plotT-16}" class="chart-note">Winter disruption</text>`;
+  s+=`<line x1="${padL}" y1="${y16}" x2="${w-padR}" y2="${y16}" stroke="var(--border)" stroke-dasharray="4 4"/>`;
+  s+=`<text x="${w-padR}" y="${y16-6}" text-anchor="end" class="chart-axis-label">16M ref.</text>`;
+  C1.forEach((d,i)=>{
+    const bx=padL+bw*i+bw*0.2, bwid=bw*0.6;
+    const by=y(d.v);
+    s+=`<rect x="${bx}" y="${by}" width="${bwid}" height="${base-by}" rx="3" fill="${d.end?'var(--txt)':'var(--col-new)'}" opacity="${d.end?1:0.85}"/>`;
+    s+=`<text x="${bx+bwid/2}" y="${by-8}" text-anchor="middle" class="${d.end?'chart-value-label':'chart-bar-value'}">${d.v.toFixed(1)}M</text>`;
+    s+=`<text x="${bx+bwid/2}" y="${h-plotB+18}" text-anchor="middle" class="chart-x-label">${d.m}</text>`;
+    if(d.note) s+=`<text x="${bx+bwid/2}" y="${by-24}" text-anchor="middle" class="chart-note">${d.note}</text>`;
+  });
+  s+=`</svg>`;
+  document.getElementById('chart1').innerHTML=s;
+}
+
+// CHART 2 — Inventory (bars) + days' supply (line), July index skips June per source table
+const C2 = [
+  {m:'Jan',inv:2.77,days:98},{m:'Feb',inv:2.85,days:92},{m:'Mar',inv:2.89,days:79},
+  {m:'Apr',inv:2.86,days:78},{m:'May',inv:2.89,days:76},{m:'Jul',inv:2.73,days:77},{m:'Aug',inv:2.68,days:73,end:true}
+];
+function renderChart2(){
+  const w=700,h=300,padL=14,padR=14,plotT=34,plotB=40;
+  const n=C2.length;
+  const bw=(w-padL-padR)/n;
+  const xC=(i)=>padL+bw*i+bw/2;
+  const yInv=scaleFn([2.5,3.0],[h-plotB,plotT]);
+  const yDays=scaleFn([65,105],[h-plotB,plotT]);
+  const base=yInv(2.5);
+  let s=`<svg viewBox="0 0 ${w} ${h}" class="chart-svg" role="img" aria-label="New-vehicle inventory and days supply by month">`;
+  C2.forEach((d,i)=>{
+    const bx=padL+bw*i+bw*0.22, bwid=bw*0.56;
+    const by=yInv(d.inv);
+    s+=`<rect x="${bx}" y="${by}" width="${bwid}" height="${base-by}" rx="3" fill="var(--col-new)" opacity="${d.end?1:0.55}"/>`;
+    s+=`<text x="${xC(i)}" y="${by-8}" text-anchor="middle" class="chart-bar-value">${d.inv.toFixed(2)}M</text>`;
+    s+=`<text x="${xC(i)}" y="${h-plotB+18}" text-anchor="middle" class="chart-x-label">${d.m}</text>`;
+  });
+  const linePts=C2.map((d,i)=>[xC(i),yDays(d.days)]);
+  s+=`<polyline points="${linePts.map(p=>p.join(',')).join(' ')}" fill="none" stroke="var(--col-days)" stroke-width="3"/>`;
+  C2.forEach((d,i)=>{
+    const px=linePts[i][0], py=linePts[i][1];
+    s+=`<circle cx="${px}" cy="${py}" r="${d.end?6:(i===0?4.5:3.5)}" fill="var(--col-days)" stroke="var(--bg-card)" stroke-width="1.5"/>`;
+    if(d.end) s+=svgBadge(px, py-14, '73 days', 'var(--col-days)', 13);
+    else if(i===0) s+=svgBadge(px, py-13, '98 days', 'var(--col-days)', 11.5);
+  });
+  const iJul=5, iAug=6;
+  const ax1=xC(iJul), ax2=xC(iAug), ay=plotT+8;
+  s+=`<line x1="${ax1}" y1="${ay}" x2="${ax2}" y2="${ay}" stroke="var(--txt-muted)" stroke-width="1"/>`;
+  s+=`<text x="${(ax1+ax2)/2}" y="${ay-6}" text-anchor="middle" class="chart-note">Sales +3.3% / inventory -1.6%</text>`;
+  s+=`</svg>`;
+  document.getElementById('chart2').innerHTML=s;
+}
+
+// CHART 5 — Manheim Used Vehicle Value Index, area/line
+const C5 = [
+  {m:'Jan',v:210.5},{m:'Feb',v:212.3},{m:'Mar',v:215.3,peak:true},{m:'Apr',v:211.9},
+  {m:'May',v:212.6},{m:'Jun',v:212.9},{m:'Jul',v:210.0},{m:'Aug',v:208.2},{m:'Mid-Sep',v:206.2,end:true}
+];
+function renderChart5(){
+  const w=700,h=260,padL=14,padR=14,plotT=52,plotB=40;
+  const n=C5.length;
+  const bw=(w-padL-padR)/n;
+  const y=scaleFn([202,218.5],[h-plotB,plotT]);
+  const base=y(202);
+  let s=`<svg viewBox="0 0 ${w} ${h}" class="chart-svg" role="img" aria-label="Manheim Used Vehicle Value Index, January to mid-September 2026">`;
+  C5.forEach((d,i)=>{
+    const bx=padL+bw*i+bw*0.18, bwid=bw*0.64;
+    const by=y(d.v);
+    const isHi=d.peak||d.end;
+    s+=`<rect x="${bx}" y="${by}" width="${bwid}" height="${base-by}" rx="3" fill="${isHi?'var(--txt)':'var(--col-used)'}" opacity="${isHi?1:0.6}"/>`;
+    s+=`<text x="${bx+bwid/2}" y="${h-plotB+18}" text-anchor="middle" class="chart-x-label">${d.m}</text>`;
+    if(d.peak){
+      s+=`<text x="${bx+bwid/2}" y="${by-24}" text-anchor="middle" class="chart-value-label">215.3</text>`;
+      s+=`<text x="${bx+bwid/2}" y="${by-10}" text-anchor="middle" class="chart-note-alt">Spring / tax-refund bounce</text>`;
+    } else if(d.end){
+      s+=`<text x="${w-padR}" y="${by-10}" text-anchor="end" class="chart-value-label">206.2 | -0.4% YoY</text>`;
+    } else {
+      s+=`<text x="${bx+bwid/2}" y="${by-8}" text-anchor="middle" class="chart-bar-value">${d.v.toFixed(1)}</text>`;
+    }
+  });
+  s+=`</svg>`;
+  document.getElementById('chart5').innerHTML=s;
+}
+
+// CHART 7 — Segment ATPs, horizontal bars (reusing bar-row pattern)
+const C7 = [
+  {label:'Compact car',val:27997},
+  {label:'Subcompact SUV',val:31149},
+  {label:'Compact SUV',val:37722},
+  {label:'Industry average',val:50089,ref:true},
+  {label:'Midsize SUV',val:50315},
+  {label:'Full-size pickup',val:67446}
+];
+function renderChart7(){
+  const max=Math.max(...C7.map(d=>d.val));
+  let html='';
+  C7.forEach((d,i)=>{
+    const pct=(d.val/max*100).toFixed(1);
+    html+=`<div class="bar-row">
+      <div class="bar-num">${i+1}</div>
+      <div class="bar-main">
+        <div class="bar-label"><span>${d.label}${d.ref?' <span style=\"color:var(--txt-muted);font-weight:600;\">(reference)</span>':''}</span><b>$${d.val.toLocaleString('en-US')}</b></div>
+        <div class="bar-track"><div class="bar-fill${d.ref?' bar-fill--ref':''}" style="width:${pct}%"></div></div>
+      </div>
+    </div>`;
+  });
+  document.getElementById('chart7').innerHTML=html;
+}
+
+renderChart1(); renderChart2(); renderChart5(); renderChart7();
+
+const obs = new IntersectionObserver((e)=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add("visible");obs.unobserve(x.target);}});},{threshold:0.06});
+document.querySelectorAll(".reveal").forEach(el=>obs.observe(el));
+</script>
+
+</body></html>
